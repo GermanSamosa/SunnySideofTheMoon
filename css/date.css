@@ -1,0 +1,50 @@
+/*
+   Filename: calendar.css
+
+   This file contains styles applied to the calendar table
+*/
+ 
+#calendar_table    {
+    background-color: #131313; 
+    font-size: 7pt; 
+    font-family: 'Kumbh Sans', sans-serif;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin: 0 0 3px 3px;
+
+}
+
+#calendar_head     {
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+    color: ivory; 
+    letter-spacing: 4px;
+
+}
+
+.calendar_weekdays {
+    width: 30px; 
+    font-size: 8pt; 
+    border-bottom-style: solid;
+    color: #9518fc;
+}
+
+.calendar_dates    {
+    text-align: center; 
+    background-color:#131313cc;
+    color: #fff;
+}
+
+#calendar_today    {
+    font-weight: bold; 
+    color: #fff; 
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); 
+    border: none;
+    outline: none;
+    border-radius: 4px;
+
+}

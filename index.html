@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | SSotM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- link for social media icons -->
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+        crossorigin="anonymous"
+    />
+    <!-- rating style & AJAX -->
+    <link rel="stylesheet" href="css/rating.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo">SSotM</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#activity" class="navbar__links" id="activity-page">Activity</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#packages" class="navbar__links" id="packages-page">Packages</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#about-us" class="navbar__links" id="about-us-page">About Us</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#faq" class="navbar__links" id="faq-page">FAQ</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="fr/index-fr.html" class="navbar__links">Français</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="formB.html" class="button">Book Now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Content Sections -->
+    <div class="hero" id="activity">
+        <div class="hero__container">
+            <h1 class="hero__heading">Basketball on the <span>Moon</span></h1>
+            <button class="main__btn"><a href="activity-packages.html">More Activities</a></button>
+        </div>
+    </div>
+    <!-- Content Sections -->
+    <div class="hero" id="packages">
+        <div class="hero__container">
+            <h1 class="hero__heading">Enjoy your Honey<span>Moon</span> on the <span>Moon</span></h1>
+            <button class="main__btn"><a href="formB.html">Book a Package now</a></button>
+        </div>
+    </div>
+    <!-- Content Sections -->
+    <div class="hero" id="about-us">
+        <div class="hero__container">
+            <h1 class="hero__heading">Want to know <span>more</span> about our mission?</h1>
+            <button class="main__btn"><a href="faq.html">About Us</a></button>
+        </div>
+    </div>
+    <!-- Content Sections -->
+    <div class="hero" id="faq">
+        <div class="hero__container">
+            <h1 class="hero__heading"><span>F</span>requently <span>A</span>sked <span>Q</span>uestions</h1>
+            <button class="main__btn"><a href="faq.html#faq">FAQ</a></button>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+                <h2>Social Media</h2>
+                <a href="/">Facebook</a> 
+                <a href="/">Twitter</a>
+                <a href="/">Instagram</a> 
+                <a href="/">LinkedIn</a>
+              </div>
+              
+            <div class="footer__link--items">
+              <h2>Learn More</h2>
+              <a href="/">Careers</a> 
+              <a href="/">Environmental Policies</a>
+              <a href="/">Health Requirements</a> 
+              <a href="/">Terms & Conditions</a>
+              
+            </div>
+          </div>
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>Useful Links</h2>
+              <a href="https://www.unoosa.org">United Nations Office of Outer Space</a> 
+              <a href="/">Affairs (UNOOSA)</a>
+              <a href="https://www.spacex.com">SpaceX</a> 
+              <a href="https://www.blueorigin.com/">Blue Oranges</a>
+            </div>
+          </div>
+        </div>
+        <section id="desc">
+          <div class="rating__container">
+            <div class="post">
+              <div class="text">Thank you for your feedback!</div>
+              <div class="edit">EDIT</div>
+            </div>
+            <div class="star-widget">
+              <input type="radio" name="rate" id="rate-5">
+              <label for="rate-5" class="fas fa-star"></label>
+              <input type="radio" name="rate" id="rate-4">
+              <label for="rate-4" class="fas fa-star"></label>
+              <input type="radio" name="rate" id="rate-3">
+              <label for="rate-3" class="fas fa-star"></label>
+              <input type="radio" name="rate" id="rate-2">
+              <label for="rate-2" class="fas fa-star"></label>
+              <input type="radio" name="rate" id="rate-1">
+              <label for="rate-1" class="fas fa-star"></label>
+              <form action="#">
+                <header></header>
+                <div class="textarea">
+                  <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                </div>
+                <div class="rating__btn">
+                  <button id="post" type="submit">Post</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="social__media">
+          <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="/" id="footer__logo">Sunny Side of the Moon</a>
+            </div>
+            <p class="website__rights">© SSotM 2020. All rights reserved</p>
+            <div class="social__icons">
+              <a href="/" class="social__icon--link" target="_blank"
+                ><i class="fab fa-facebook"></i></a>
+              <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+              <a href="/" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+              <a href="/" class="social__icon--link"><i class="fab fa-linkedin"></i></a>
+              <a href="/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    <script src="scripts/indexNavScript.js"></script>
+    <script type="text/javascript" src="scripts/rating.js"></script>
+</body>
+</html>

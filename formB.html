@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form for SSotM</title>
+  <script src="scripts/javascript-3-6-0.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!--Custom CSS-->
+  <link href="css/formB.css" rel="stylesheet">
+  <!-- JavaScript link for data transfer -->
+  <script src="./scripts/formB.js"></script>
+  <script src="./scripts/javascript-3-6-0.js"></script>
+  <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+        crossorigin="anonymous"
+    />
+    <!-- rating style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <!-- calendar js & css -->
+    <script type="text/javascript" src="scripts/date.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/date.css" />
+    <link rel="stylesheet" href="css/rating.css" />
+  
+</head>
+
+
+  <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+        <a href="#home" id="navbar__logo">SSotM</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="activity-packages.html" class="navbar__links" id="activity-page">Activity</a>
+            </li>
+            <li class="navbar__item">
+                <a href="activity-packages.html#packages" class="navbar__links" id="packages-page">Packages</a>
+            </li>
+            <li class="navbar__item">
+                <a href="faq.html" class="navbar__links" id="about-us-page">About Us</a>
+            </li>
+            <li class="navbar__item">
+                <a href="faq.html#faq" class="navbar__links" id="faq-page">FAQ</a>
+            </li>
+            <li class="navbar__item">
+                <a href="index-fr.html" class="navbar__links">Français</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="formB.html" class="button">Book Now</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Content Starts Here -->
+<div id="___container">
+    <div class="date__container">
+        <header id="date__head">
+            <script>
+                // create a date object 
+                let today = new Date();
+                getCalendar(today);
+            </script>
+        </header>
+    </div>
+  <form id="booking_form" method="get" action="./successful-process.html" onsubmit="return validateForm(this);">
+    <div class="opacity-100" style=color:white>
+      <h1 class="text-center">Sunny Side of the Moon Reservation Form</h1>
+      <section id="contact">
+        <div class="container-lg">
+          <div class="row justify-content-center my-5">
+            <h2 class="text-center">Guest Personal Information</h2>
+            <div class="col-lg-6">
+              <label for="fname" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="fname" name="fname" placeholder="e.g. Neil" size="20" maxlength="20"
+                >
+              <label for="lname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lname" name="lname" placeholder="e.g. Armstrong" size="20" maxlength="20"
+               >
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" name="address" placeholder="e.g. 742 Evergreen Terrace" size="50"
+                maxlength="50" >
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" name="city" placeholder="e.g. Saint-Louis-du-Ha! Ha!" size="20"
+                maxlength="20" >
+              <label for="province" class="form-label">Province / Territory</label>
+              <select class="form-select" id="province" name="province">
+                <option value="alberta">Alberta</option>
+                <option value="british_columbia">British Columbia</option>
+                <option value="manitoba">Manitoba</option>
+                <option value="new_brunswick">New Brunswick</option>
+                <option value="newfoundland_and_labrador">Newfoundland and Labrador</option>
+                <option value="northwest_territories">Northwest Territories</option>
+                <option value="nova_scotia">Nova Scotia</option>
+                <option value="nunavut">Nunavut</option>
+                <option value="ontario">Ontario</option>
+                <option value="prince_edward_island">Prince Edward Island</option>
+                <option value="quebec">Quebec</option>
+                <option value="saskatchewan">Saskatchewan</option>
+                <option value="yukon">Yukon</option>
+              </select>
+              <label for="postal_code" class="form-label">Postal Code</label>
+              <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="e.g. H0H 0H0" size="7" maxlength="7"
+                >
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="e.g. neil.armstrong@NASA.gov" size="40"
+                maxlength="40" >
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="e.g. (555) 867-5309" size="16"
+                maxlength="16" >
+              <br />
+              <h2 class="text-center">Hotel Reservation Information</h2>
+              <h6>Packages</h6>
+              <div class="form-check" id="radio_package">
+                <input class="form-check-input" type="radio" name="flexRadioPackage" id="sunny_package" value="Sunny Package" checked>
+                <label class="form-check-label" for="sunny_package">
+                  Sunny Package
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPackage" id="sunny_plus_package" value="Sunny Plus Package" >
+                <label class="form-check-label" for="sunny_plus_package">
+                  Sunny Plus Package
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPackage" id="sunny_extreme_package" value="Sunny Extreme Package" >
+                <label class="form-check-label" for="sunny_extreme_package">
+                  Sunny Extreme Package
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPackage" id="sunny_honeymoon_package" value="Sunny HoneyMoon Package" >
+                <label class="form-check-label" for="sunny_honeymoon_package">
+                  Sunny HoneyMoon Package
+                </label>
+              </div>
+              <br />
+              <label for="length_of_stay" class="form-label">Length of Stay (excluding travel time)</label>
+              <select class="form-select" id="length_of_stay" name="length_of_stay">
+                <option value="4-days">4 Days</option>
+                <option value="8-days">8 Days</option>
+                <option value="15-days">15 Days</option>
+                <option value="22-days">22 Days</option>
+              </select>
+              <br />
+              <label for="number-of-people" class="form-label">Number of People</label>
+              <select class="form-select" id="number-of-people" name="number-of-people" >
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <br />
+              <label for="number-of-adults" class="form-label">Number of Adults</label>
+              <select class="form-select" id="number-of-people" name="number-of-people" >
+                <option value="1">1</option>
+                <option selected value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <label for="number-of-children" class="form-label">Number of children</label>
+              <select class="form-select" id="number-of-children" name="number-of-children" >
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <br />
+              <h6>Payment Method - $5,000 deposit per person required</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPayment" id="visa" checked>
+                <label class="form-check-label" for="visa">
+                  Visa
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPayment" id="mastercard">
+                <label class="form-check-label" for="mastercard">
+                  Master Card
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPayment" id="americanexpress">
+                <label class="form-check-label" for="americanexpress">
+                  American Express
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPayment" id="bitcoin">
+                <label class="form-check-label" for="bitcoin">
+                  Bitcoin
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPayment" id="etherium">
+                <label class="form-check-label" for="etherium">
+                  Etherium
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioPayment" id="dogecoin">
+                <label class="form-check-label" for="dogecoin">
+                  Dogecoin
+                </label>
+              </div>
+              <label for="card_wallet" class="form-label">Credit Card or Coin Wallet Number </label>
+              <input type="text" class="form-control" id="card_wallet" name="card_wallet" placeholder="Card or Wallet Number" size="35"
+                maxlength="35" >
+              <label for="cvs" class="form-label">CVS</label>
+              <input type="text" class="form-control" id="cvs" name="cvs" placeholder="The 3-4 digits on the back of your card"
+                size="4" maxlength="4">
+              <br />
+              <h6> Dietary Restrictions</h6>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="vegetarian" name="vegetarian" >
+                <label class="form-check-label" for="vegetarian">Vegetarian</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="pescatarian" name="pescatarian" >
+                <label class="form-check-label" for="pescatarian">Pescatarian</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="vegan" name="vegan" >
+                <label class="form-check-label" for="vegan">Vegan</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="gluten-free" name="gluten-free" >
+                <label class="form-check-label" for="gluten-free">Gluten-Free</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="halal" name="halal" >
+                <label class="form-check-label" for="halal">Halal</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="kosher" name="kosher" >
+                <label class="form-check-label" for="kosher">Kosher</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="allergies" name="allergies" >
+                <label class="form-check-label" for="allergies">Allergies</label>
+                <input type="text" class="form-control-inline" id="allergiestxt" name="allergiestxt" placeholder="Allergen">
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="other" name="other" >
+                <label class="form-check-label" for="other">Other</label>
+                <span>&emsp;</span>
+                <input type="text" class="form-control-inline" id="othertxt" name="othertxt" placeholder="Other dietary restrictions">
+              </div>
+              <br />
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="termsAndConditions" name="termsAndConditions" required>
+                <label class="form-check-label" for="termsAndConditions">
+                  By submitting this form you agree with our <a href="terms-and-conditions.html">Terms and
+                    Conditions</a>
+                </label>
+              </div>
+              <br />
+              <input type="submit" id="submit_form" class="btn btn-outline-light" 
+                role="button" onclick="hadleSubmit();">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </form>
+</div>
+ <!-- Footer Section -->
+ <div class="footer__container">
+  <div class="footer__links">
+    <div class="footer__link--wrapper">
+      <div class="footer__link--items">
+          <h2>Social Media</h2>
+          <a href="/">Facebook</a> 
+          <a href="/">Twitter</a>
+          <a href="/">Instagram</a> 
+          <a href="/">LinkedIn</a>
+        </div>
+        
+      <div class="footer__link--items">
+        <h2>Learn More</h2>
+        <a href="/">Careers</a> 
+        <a href="/">Environmental Policies</a>
+        <a href="/">Health Requirements</a> 
+        <a href="/">Terms & Conditions</a>
+        
+      </div>
+    </div>
+    <div class="footer__link--wrapper">
+      <div class="footer__link--items">
+        <h2>Useful Links</h2>
+        <a href="https://www.unoosa.org">United Nations Office of Outer Space</a> 
+        <a href="/">Affairs (UNOOSA)</a>
+        <a href="https://www.spacex.com">SpaceX</a> 
+        <a href="https://www.blueorigin.com/">Blue Oranges</a>
+      </div>
+    </div>
+  </div>
+  <section id="desc">
+    <div class="rating__container">
+      <div class="post">
+        <div class="text">Thank you for your feedback!</div>
+        <div class="edit">EDIT</div>
+      </div>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+          </div>
+          <div class="rating__btn">
+            <button type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="social__media">
+    <div class="social__media--wrap">
+      <div class="footer__logo">
+        <a href="/" id="footer__logo">Sunny Side of the Moon</a>
+      </div>
+      <p class="website__rights">© SSotM 2020. All rights reserved</p>
+      <div class="social__icons">
+        <a href="/" class="social__icon--link" target="_blank"
+          ><i class="fab fa-facebook"></i></a>
+        <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+        <a href="/" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+        <a href="/" class="social__icon--link"><i class="fab fa-linkedin"></i></a>
+        <a href="/" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="scripts/formBNavScript.js"></script>
+<script type="text/javascript" src="scripts/rating.js"></script>
+</body>
+</html>
+
+  <script src="https://kit.fontawesome.com/1978e00067.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    function countryHandler(value) {
+      window.location.assign(`${value}.html`);
+    }
+  </script>
+</body>
+
+</html>
